@@ -33,3 +33,17 @@
     }
   }
   
+  .auction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 80vh; /* Adjust height as needed */
+    padding: 10px;
+}
+
+.auction-card {
+    width: 100%;
+    padding: 20px;
+}

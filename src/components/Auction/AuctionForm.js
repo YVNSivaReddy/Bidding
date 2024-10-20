@@ -96,7 +96,7 @@ import { Message } from 'primereact/message';
 import { Divider } from 'primereact/divider';
 import './AuctionForm.css'; // Add your custom CSS for 50% width
 
-const AuctionForm = () => {
+const AuctionForm = ({closeForm}) => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -127,6 +127,7 @@ const AuctionForm = () => {
       if (response.status === 201) {
         setSuccess('Auction created successfully!');
         setError(null);
+        closeForm();
       } else {
         setError('Failed to create auction.');
       }
